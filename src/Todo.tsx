@@ -4,7 +4,7 @@ import Task from './Task'
 
 
 function Todo() {
-  this.input = React.createRef();
+  
 
 
   const onKeyDownCallback = (ev: React.KeyboardEvent<HTMLInputElement>) => {
@@ -19,7 +19,6 @@ function Todo() {
     const addCardTodo =() => {
       if(input==""){alert("Task cannot be empty");}
       else{setData((strings) => [input,...strings]);
-;
     }
 
     }
@@ -40,7 +39,7 @@ function Todo() {
       {/* task input and add button */}
       <div className='flex space-x-1'>
       <input onChange={ev => setInput(ev.target.value)} className='border border-gray-400 w-full text-2xl'
-      onKeyDown={onKeyDownCallback} ref={this.input}></input>
+      onKeyDown={onKeyDownCallback} ></input>
 
 
       <button onClick={addCardTodo}   className='border border-gray-400 w-8 font-bold'>+</button>
