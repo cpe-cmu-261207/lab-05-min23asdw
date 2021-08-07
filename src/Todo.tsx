@@ -14,7 +14,8 @@ function Todo() {
   const [doneArr, setDone] = useState<string[]>([]); // done
   //add TODO
   const addCardTodo =() => {
-    setData((strings) => [input,...strings]);
+    if(input==""){alert("Task cannot be empty");}else{setData((strings) => [input,...strings]);}
+
   }
 
   const deleteTask =(index:number)=>{
@@ -47,7 +48,7 @@ function Todo() {
     </div>
 <div>
 </div>
-    <div className='bg-green-500 '>
+    <div className='bg-green-500 line-through'>
   {
     doneArr.map(  (name,index)=>(    <Task value = {name}  index = {index} done={true}></Task>   ))
   }

@@ -22,7 +22,7 @@ function Task( props:task) {
         <button onClick={()=>props.addCardDone(props.value,props.index)} id='done' className="bg-green-400 w-24 text-2xl" >Done</button>
         <button onClick={()=>props.deleteTask(props.index)} id='delete' className="bg-red-400 w-24 text-2xl" >Delete</button>
       </div>
-    : <div className="flex space-x-1 justify-center"/>
+    : <div className="flex space-x-1 justify-center "/>
     }
     </div>
 );
