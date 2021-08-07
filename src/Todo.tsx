@@ -24,7 +24,7 @@ function Todo() {
     setData((strings) => [...strings.slice(0, index), ...strings.slice(index + 1)]);  //ลบจาก todo
 
 
-    setDone([...doneArr,...a]);   // เพิ่มลง done
+    setDone([...a,...doneArr]);   // เพิ่มลง done
   }
 
   return <div className='mx-auto max-w-4xl'>
