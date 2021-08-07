@@ -19,7 +19,7 @@ function Todo() {
     const addCardTodo =() => {
       if(input==""){alert("Task cannot be empty");}
       else{setData((strings) => [input,...strings]);
-
+        setInput("");
     }
 
     }
@@ -39,7 +39,7 @@ function Todo() {
 
       {/* task input and add button */}
       <div className='flex space-x-1'>
-      <input  onChange={ev => setInput(ev.target.value)} className='border border-gray-400 w-full text-2xl'
+      <input value = {input}  onChange={ev => setInput(ev.target.value)} className='border border-gray-400 w-full text-2xl'
       onKeyDown={onKeyDownCallback} ></input>
 
 
